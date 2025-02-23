@@ -1,0 +1,112 @@
+.font-kosugi {
+    font-family: 'Kosugi Maru', sans-serif;
+    font-weight: bold;
+}
+.top-image {
+    width: 600px;
+    display: block;
+    margin: 2rem auto;
+}
+.header-logo {
+    height: 150px;
+    padding-top: 3.5rem;
+    background-image: url(images/trees-1915244_1280.jpg);
+}
+.page-title {
+    text-align: center;
+}
+.list-box {
+    width: fit-content;
+    margin: auto;
+}
+.list-item {
+    display: inline-block;
+    font-size: 1.25rem;
+    font-weight: bold;
+    position: relative;
+    padding: 0.1em 0.3em;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+.list-item a:before{
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom:0;
+    width: 100%;
+    height: 1%;
+    transition: all 0.3s ease;
+    opacity: 0;
+    background-color:#05cae8;/*ホバー時の背景色*/
+}
+.list-item a:after {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    content: '';
+    transition: all 0.3s ease;
+    border-bottom: 3px solid #1cc5e2;/*下線の色*/
+    opacity: 1;
+}
+.list-item a:hover::before {
+    height: 100%;
+    opacity: 0.4;
+}
+.list-item a:hover::after {
+    left: 50%;
+    right: 50%;
+    width: 0%;
+    opacity: 0;
+}
+.movie {
+    margin: 1.5rem 10%;
+    padding: 0.4rem 1rem;/*文字の上下 左右の余白*/
+    color: #000000;/*文字色*/
+    background: #c4ecf7;/*背景色*/
+    border-left: solid 5px #1cc5e2;/*左線*/
+    border-bottom: solid 3px #d7d7d7;/*下線*/
+    font-size: 1.5rem;
+}
+.movie-item {
+    margin: 0 10%;
+    position: relative;
+    padding: 1rem .5rem;
+    font-size: 1.25rem;
+}
+.movie-item:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    content: '';
+    border-radius: 3px;
+    background-image: -webkit-gradient(linear, right top, left top, from(#2af598), to(#009efd));
+    background-image: -webkit-linear-gradient(right, #2af598 0%, #009efd 100%);
+    background-image: linear-gradient(to left, #2af598 0%, #009efd 100%);
+}
+.video {
+    display: flex;
+    gap: 1rem;
+    padding: 2rem 10%;
+}
+.vido-item {
+    width: 25%;
+}
+.story {
+    width: 65%;
+}
+
+@media (max-width: 768px) {
+    .video {
+        flex-direction: column;
+    }
+    .vido-item {
+        width: 100%;
+    }
+    .story {
+        width: 100%;
+    }
+}
